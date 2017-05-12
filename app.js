@@ -27,9 +27,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-  var myMultiply = a * b;
-  var myMsg = 'The sum of ' + a + ' and ' + b + ' is ' + myMultiply + '.';
-  return [myMultiply, myMsg];
+  var myProduct = a * b;
+  var myMsg = 'The product of ' + a + ' and ' + b + ' is ' + myProduct + '.';
+  return [myProduct, myMsg];
 }
 
 multiply(5, 9);
@@ -49,9 +49,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+  var mySum = sum(a,sum(b,c)[0])[0];
+  var myProduct = multiply(a,multiply(b,c)[0])[0];
+  var myMsg = 'The sum of ' + a + ' and ' + b + ' and ' + c + ' is ' + mySum + '. The product of  ' + a + ' and ' + b + ' and ' + c + ' is ' + myProduct + '.';
+  return [mySum, myProduct, myMsg];
 
 }
 
+sumAndMultiply(4,7,5);
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
